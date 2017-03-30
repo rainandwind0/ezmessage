@@ -6,8 +6,8 @@
     if(isset($_POST['register'])) {
         if(registerNewUser($_POST['name'], $_POST['email'], $_POST['pwd'], $_POST['pwdCheck'])) {
            
-            echo "Thank you for registering, an email has been sent to your inbox, Please activate your account.
-		<a href='./index.php'>Click here to login.</a>";
+            header("Location: index.php");
+            exit();
 
         } else {
 
