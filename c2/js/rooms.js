@@ -20,7 +20,7 @@ function updateRoom(e) {
             dataType: 'json',    
             success: roomReady,
             error: function(res) {
-                alert(JSON.stringify(res.status));
+                //alert(JSON.stringify(res.status));
             }
         });
 }
@@ -60,7 +60,7 @@ function pollRoomMessages() {
             setTimeout(updateScroll, 100);
         },
         error: function(res) {
-            alert(JSON.stringify(res.status));
+            //alert(JSON.stringify(res.status));
         }
     });
 }
