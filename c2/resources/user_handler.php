@@ -7,18 +7,16 @@
     function registerNewUser($name, $email, $pwd, $pwdCheck) {
     $db = new DB();
     $conn = $db->getConn();
-        //echo "password valid? ".valid_password($pwd);
-        //echo "passwordCheck valid? ".valid_password($pwdCheck);
-        //echo "email valid? ".valid_email($email);
+    $success = false;
+
         if(valid_password($pwd) && valid_password($pwdCheck) && valid_email($email)) {
             
             $q = $conn->prepare("INSERT INTO users (email, password, failed_attempts, name) VALUES (?, ?, ? , ?);");
             $success = $q->execute(array($email, $pwd, 0, $name));
-            echo $success;
-            print_r($q->errorInfo());
+
         }
         
-        return false;
+        return $success;
     }
 
     function user_exists($email) {
