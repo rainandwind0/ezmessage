@@ -6,10 +6,10 @@
         unset($_SESSION['email']);
         unset($_SESSION['name']);
         session_destroy();
-        header('Location: /c2/index.php');
+        header('Location: /index.php');
     } else {
         session_destroy();
-        header('Location: /c2/index.php');
+        header('Location: /index.php');
     }
 
 ?>

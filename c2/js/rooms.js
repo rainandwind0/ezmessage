@@ -15,7 +15,7 @@ function updateRoom(e) {
             mine = true;
         }
         $.ajax({                                      
-            url: '/c2/resources/room_handler.php?rid='+e.target.id,   
+            url: '/resources/room_handler.php?rid='+e.target.id,   
             type:'GET',      
             dataType: 'json',    
             success: roomReady,
@@ -52,7 +52,7 @@ function roomReady(res) {
 
 function pollRoomMessages() {
     $.ajax({                                      
-        url: '/c2/views/room.php',   
+        url: '/views/room.php',   
         type:'GET',      
         dataType: 'html',    
         success: function(res) {

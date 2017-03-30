@@ -9,7 +9,7 @@
     if(isset($_POST['new'])) {
         $res = createRoom($_SESSION['loginid'], $_POST['name'], $_POST['pwd'], $_POST['pwdCheck']);
         $_SESSION['toast'] = $res['msg'];
-        header('Location: /c2/index.php');
+        header('Location: /index.php');
     }
 
     if(isset($_POST['msg'])) {
@@ -23,7 +23,7 @@
     if(isset($_POST['join'])) {
         $res = joinRoom($_SESSION['loginid'], $_POST['name'], $_POST['pwd']);
         $_SESSION['toast'] = $res['msg'];
-        header('Location: /c2/index.php');
+        header('Location: /index.php');
     }
 
     //echo "here";

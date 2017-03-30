@@ -14,7 +14,7 @@ $("#chat-input-wrapper").submit(function(event){
     inputs.prop("disabled", true);
 
     request = $.ajax({
-        url: "/c2/resources/post_handler.php",
+        url: "/resources/post_handler.php",
         type: "post",
         data: serializedData,
     });
